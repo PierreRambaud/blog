@@ -1,0 +1,5 @@
+<phpunit bootstrap="./Bootstrap.php" colors="true">
+    <testsuite name="Upload Test Suite">
+        <directory suffix="Test.php" phpVersion="5.3.0" phpVersionOperator=">=">./</directory>
+    </testsuite>
+</phpunit>
