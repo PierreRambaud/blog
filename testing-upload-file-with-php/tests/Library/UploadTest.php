@@ -42,11 +42,13 @@ class UploadTest extends \PHPUnit_Framework_TestCase
         @unlink(__DIR__ . '/_files/test.jpg');
     }
 
-    /**
-     * @covers Upload::receive
-     */
     public function testReceive()
     {
         $this->assertTrue($this->_object->receive('test'));
+    }
+
+    public function testReceiveWithUnknowFile()
+    {
+        $this->assertFalse($this->_object->receive('test2'));
     }
 }
